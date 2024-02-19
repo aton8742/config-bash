@@ -1,0 +1,12 @@
+#!/bin/bash
+
+[[ "$#" -ne 1 ]] && echo "usage: $0 [command]" && exit 0
+
+ARG="${1}"
+
+echo "whatis=$(whatis "${ARG}")"
+echo "type=$(type "${ARG}")"
+echo "whereis=$(whereis "${ARG}")"
+echo "which=$(which "${ARG}")"
+echo "command -v=$(command -v "${ARG}")"
+
